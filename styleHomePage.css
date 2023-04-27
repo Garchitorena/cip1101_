@@ -1,0 +1,132 @@
+
+.navbar{
+    background-color: #212F3C ;
+    overflow: hidden;
+    margin-top: 0;
+    padding: 0;
+    height: 100px;
+    margin-bottom: 0;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+li { 
+    list-style-type: none;
+    float: right;
+    padding: 1%;
+    font-size: 30px;
+}
+
+li a {
+    display: block;
+    color: #DC7633;
+    text-align: center;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+li a:hover {
+    color: #F5B041 ;
+    background-color: transparent;
+}
+
+body, html {
+    height: 90%;
+}
+
+.hero-image {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/beach.png");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+}
+
+.hero-text {
+    text-align: center;
+    position: relative;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+    color: #F5B041;
+}
+
+p{
+    font-size: 300%;
+    color:white;
+}
+h3{
+    color: #F5B041 ;
+}
+
+h1{
+    font-family: 'Light Beach', sans-serif;
+    font-size: 500%;
+}
+
+h2{
+    color:white;
+}
+
+.button1{
+    border: 50px;
+    background-color: #212F3C;
+    color: #DC7633;
+    font-size: 200%;
+}
+
+
+.footer{
+    background-color: #212F3C;
+    height: 200px;
+    display: flex;
+}
+
+.link{
+    text-align: center;
+}
+
+.button1:hover {
+    opacity: 0.7;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+  
+.fa:hover {
+      opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+footer {
+    text-align: center;
+    padding: 3px;
+    background-color: #212F3C;
+    color: white;
+  }
+@import url('https://fonts.cdnfonts.com/css/beach');

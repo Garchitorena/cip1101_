@@ -1,0 +1,206 @@
+.navbar{
+    background-color: #212F3C;
+    overflow: hidden;
+    margin-top: 0;
+    padding: 0;
+    height: 100px;
+    margin-bottom: 0;
+}
+
+body {
+    margin: 0;
+    background-color: #F5B041;
+    padding: 0;
+}
+
+.amenities p {
+    width: 100%;
+    background-color: white;
+    color: black;
+    text-align: justify;
+    width: auto;
+    padding: 5px;
+    font-size: 1.5em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.amenities #p2 {
+    width: 100%;
+    background-color: white;
+    color: black;
+    font-size: 1.5em;
+    text-align: justify;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: auto;
+    border: 2px solid black;
+    height: 17vh;
+    vertical-align: auto;
+    padding: 5%;
+}
+
+.amenities hr {
+    border: 2px solid black;
+}
+
+.amenities h1 {
+    text-align: center;
+    color: #DC7633;
+    background-color: #212F3C;
+    font-size: 35px; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.amenities h2 {
+    text-align: center;
+    background-color: black;
+    letter-spacing: 10;
+    color: #F5B041;
+    font-size: 50px; 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0px !important;   
+}
+
+.amenities h3 {
+    text-align: center;
+    background-color: #212F3C;
+    color: #DC7633;
+    letter-spacing: 2;
+    font-size: 25px; 
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px !important;
+    border: 2px solid black;
+}
+
+.amenities a {
+      background-color: black;
+      color: white;
+      font-size: 80;
+      letter-spacing: 10;
+      width: 100%;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+}
+
+#background_div {
+    width: 90%; 
+    height: fit-content;      
+    background-color: #212F3C;
+    border: 2px solid black
+}
+
+#div1{
+  background-color: white;
+  margin: 0px !important;
+}
+
+#img {
+  height: 40vh;
+  width: 99%;
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-color: black;
+}
+
+.column2 {
+  float: left;
+  width: 33.33%;
+  background-color: black;
+}
+
+/* Clear floats after the columns */
+.amenities .row:after {
+  content: "";
+  display: table;
+  clear: both;
+  margin: 0px !important;
+  height: 100%;
+  background-color: black;
+  
+}
+
+li { 
+    list-style-type: none;
+    float: right;
+    padding: 1%;
+    font-size: 30px;
+}
+
+li a {
+    display: block;
+    color: #DC7633;
+    text-align: center;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+li a:hover {
+    color: #F5B041 ;
+    background-color: transparent;
+}
+
+body, html {
+    height: 90%;
+}
+
+h1 {
+    color: #212F3C;
+}
+
+p{
+    font-size: 300%;
+    color:black;
+}
+
+h2{
+    color:white;
+}
+
+.header2 {
+    color:black;
+}
+
+h3{
+    color: #F5B041 ;
+}
+
+.header3 {
+    color: black;
+}
+
+footer{
+    background-color: #212F3C;
+    text-align: center;
+    height: 250px;
+    margin-top: 10px;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+  
+.fa:hover {
+      opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}

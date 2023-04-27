@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sunny Skies Beach Resort</title>
+        <link href="https://fonts.cdnfonts.com/css/beach" rel="stylesheet">
+        <link rel="stylesheet" href="styleHomePage.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1; 
+            padding-top: 100px; 
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%; 
+            overflow: auto; 
+            background-color: rgb(0,0,0); 
+            background-color: rgba(0,0,0,0.4); 
+            }
+
+
+            .modal-content {
+            background-color: #fefefe;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            }
+
+
+            .close {
+            color: #aaaaaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            }
+
+            .close:hover,
+            .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="navbar">
+        <ul>
+            <a href="index.html">
+                <img src="images/logo.png" style="width: 85px; height: 65px; margin: 3px; padding-left: 100px;">
+            </a>
+            
+            <li>
+                <a href="contacts.html">CONTACT</a>
+            </li>
+
+            <li>
+                <a href="location.html">LOCATION</a>
+            </li>
+
+            <li>
+                <a href="amenities.html">AMENITIES</a>
+            </li>
+
+            <li>
+                <a href="rooms&rate.html">ROOMS & RATES</a>
+            </li>
+
+            <li>
+                <a href="index.html">HOME</a>
+            </li>
+        </ul>
+        </div>
+
+        <center>
+
+        <h1 style="color: black; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">Accomodation</h1>
+            
+        <form action="reservation.php" method="post" style="margin-top: 60px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; font-size: 20px;">
+            <div class="elem-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" name="visitor_name" placeholder="Name" pattern=[A-Z\sa-z]{3,20} required style="width: 10%;">
+            </div>
+            <br>
+            <div class="elem-group">
+              <label for="email">Your E-mail</label>
+              <input type="email" id="email" name="visitor_email" placeholder="lorem.ipsum@email.com" required>
+            </div>
+            <br>
+            <div class="elem-group">
+              <label for="phone">Your Phone</label>
+              <input type="tel" id="phone" name="visitor_phone" placeholder="9611454">
+            </div>
+            <hr style="width: 50%;">
+            <div class="elem-group inlined">
+              <label for="adult">Adults</label>
+              <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+            </div>
+            <br>
+            <div class="elem-group inlined">
+              <label for="child">Children</label>
+              <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+            </div>
+            <br>
+            <div class="elem-group inlined">
+              <label for="checkin-date">Check-in Date</label>
+              <input type="date" id="checkin-date" name="checkin" required>
+            </div>
+            <br>
+            <div class="elem-group inlined">
+              <label for="checkout-date">Check-out Date</label>
+              <input type="date" id="checkout-date" name="checkout" required>
+            </div>
+            <br>
+
+            <div class="elem-group">
+                <label for="room-selection">Select Room Preference</label>
+                <select id="room-selection" name="room_preference" required>
+                    <option value="">Choose a Room from the List</option>
+                    <option value="lover">LOVERS ROOM</option>
+                    <option value="family">FAMILY ROOM</option>
+                    <option value="trveller">TRAVELLERS ROOM</option>
+                </select>
+            </div>
+
+            <hr style="width: 50%;">
+            <div class="elem-group">
+              <label for="message">Anything Else?</label>
+              <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required rows="10" cols="55"></textarea>
+            </div>
+            <br>
+
+          </form>
+        
+        <button id="myBtn" style="width: 150px;">SUBMIT</button>
+
+        <div id="myModal" class="modal" style="margin-bottom: 50%;">
+          
+            <div class="modal-content">
+              <span class="close">&times;</span>
+              <p style="color:black; size: 40px;">THANK YOU FOR YOU RESERVATION</p>
+            </div>
+        </div>
+
+        <br>
+        <form action="index.html" method="POST" style="margin-top: 10px;">
+			<button class="button button2" style="width: 150px;">RETURN</button>
+		</form>
+        </center>
+
+        <p>awdawdawdaw</p>
+
+
+        <script>
+            var currentDateTime = new Date();
+            var year = currentDateTime.getFullYear();
+            var month = (currentDateTime.getMonth() + 1);
+            var date = (currentDateTime.getDate() + 1);
+
+            if(date < 10) {
+            date = '0' + date;
+            }
+            if(month < 10) {
+            month = '0' + month;
+            }
+        
+            var dateTomorrow = year + "-" + month + "-" + date;
+            var checkinElem = document.querySelector("#checkin-date");
+            var checkoutElem = document.querySelector("#checkout-date");
+
+            checkinElem.setAttribute("min", dateTomorrow);
+
+            checkinElem.onchange = function () {
+                checkoutElem.setAttribute("min", this.value);
+            }
+        </script>
+        <script>
+            var modal = document.getElementById("myModal");
+
+            var btn = document.getElementById("myBtn");
+
+            var span = document.getElementsByClassName("close")[0];
+
+            btn.onclick = function() {
+            modal.style.display = "block";
+            }
+
+            span.onclick = function() {
+            modal.style.display = "none";
+            }
+
+            window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+            }
+        </script>
+
+        <footer>
+                <h2>Social Media Links</h2>
+                <a href="" class="fa fa-facebook"></a>
+                <a href="" class="fa fa-twitter"></a>
+                <a href="" class="fa fa-instagram"></a>
+                <h3>&copy; 2023 Sunny Skies Beah Resort.<br>All Rigths Reseerved</h3>
+        </footer>
+    </body>
+</html>
